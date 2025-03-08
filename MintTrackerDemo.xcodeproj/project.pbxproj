@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D785B762D782A9E00389C6A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D785B752D782A9E00389C6A /* WidgetKit.framework */; };
+		5D785B782D782A9E00389C6A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D785B772D782A9E00389C6A /* SwiftUI.framework */; };
+		5D785B872D782AA000389C6A /* MintWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5D785B732D782A9E00389C6A /* MintWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D785B532D78270D00389C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D785B382D78270C00389C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D785B3F2D78270C00389C6A;
+			remoteInfo = MintTrackerDemo;
+		};
+		5D785B5D2D78270D00389C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D785B382D78270C00389C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D785B3F2D78270C00389C6A;
+			remoteInfo = MintTrackerDemo;
+		};
+		5D785B852D782AA000389C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D785B382D78270C00389C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D785B722D782A9E00389C6A;
+			remoteInfo = MintWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5D785B8C2D782AA000389C6A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5D785B872D782AA000389C6A /* MintWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5D785B402D78270C00389C6A /* MintTrackerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MintTrackerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D785B522D78270D00389C6A /* MintTrackerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MintTrackerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D785B5C2D78270D00389C6A /* MintTrackerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MintTrackerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D785B732D782A9E00389C6A /* MintWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MintWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D785B752D782A9E00389C6A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5D785B772D782A9E00389C6A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5DD075782D7AD26800C5E8B6 /* MintWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MintWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5D785B882D782AA000389C6A /* Exceptions for "MintWidgetExtension" folder in "MintWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5D785B722D782A9E00389C6A /* MintWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5D785B422D78270C00389C6A /* MintTrackerDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MintTrackerDemo;
+			sourceTree = "<group>";
+		};
+		5D785B552D78270D00389C6A /* MintTrackerDemoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MintTrackerDemoTests;
+			sourceTree = "<group>";
+		};
+		5D785B5F2D78270D00389C6A /* MintTrackerDemoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MintTrackerDemoUITests;
+			sourceTree = "<group>";
+		};
+		5D785B792D782A9E00389C6A /* MintWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5D785B882D782AA000389C6A /* Exceptions for "MintWidgetExtension" folder in "MintWidgetExtensionExtension" target */,
+			);
+			path = MintWidgetExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D785B3D2D78270C00389C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B4F2D78270D00389C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B592D78270D00389C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B702D782A9E00389C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D785B782D782A9E00389C6A /* SwiftUI.framework in Frameworks */,
+				5D785B762D782A9E00389C6A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D785B372D78270C00389C6A = {
+			isa = PBXGroup;
+			children = (
+				5DD075782D7AD26800C5E8B6 /* MintWidgetExtensionExtension.entitlements */,
+				5D785B422D78270C00389C6A /* MintTrackerDemo */,
+				5D785B552D78270D00389C6A /* MintTrackerDemoTests */,
+				5D785B5F2D78270D00389C6A /* MintTrackerDemoUITests */,
+				5D785B792D782A9E00389C6A /* MintWidgetExtension */,
+				5D785B742D782A9E00389C6A /* Frameworks */,
+				5D785B412D78270C00389C6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D785B412D78270C00389C6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D785B402D78270C00389C6A /* MintTrackerDemo.app */,
+				5D785B522D78270D00389C6A /* MintTrackerDemoTests.xctest */,
+				5D785B5C2D78270D00389C6A /* MintTrackerDemoUITests.xctest */,
+				5D785B732D782A9E00389C6A /* MintWidgetExtensionExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D785B742D782A9E00389C6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D785B752D782A9E00389C6A /* WidgetKit.framework */,
+				5D785B772D782A9E00389C6A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D785B3F2D78270C00389C6A /* MintTrackerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D785B662D78270D00389C6A /* Build configuration list for PBXNativeTarget "MintTrackerDemo" */;
+			buildPhases = (
+				5D785B3C2D78270C00389C6A /* Sources */,
+				5D785B3D2D78270C00389C6A /* Frameworks */,
+				5D785B3E2D78270C00389C6A /* Resources */,
+				5D785B8C2D782AA000389C6A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D785B862D782AA000389C6A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5D785B422D78270C00389C6A /* MintTrackerDemo */,
+			);
+			name = MintTrackerDemo;
+			packageProductDependencies = (
+			);
+			productName = MintTrackerDemo;
+			productReference = 5D785B402D78270C00389C6A /* MintTrackerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D785B512D78270D00389C6A /* MintTrackerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D785B692D78270D00389C6A /* Build configuration list for PBXNativeTarget "MintTrackerDemoTests" */;
+			buildPhases = (
+				5D785B4E2D78270D00389C6A /* Sources */,
+				5D785B4F2D78270D00389C6A /* Frameworks */,
+				5D785B502D78270D00389C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D785B542D78270D00389C6A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5D785B552D78270D00389C6A /* MintTrackerDemoTests */,
+			);
+			name = MintTrackerDemoTests;
+			packageProductDependencies = (
+			);
+			productName = MintTrackerDemoTests;
+			productReference = 5D785B522D78270D00389C6A /* MintTrackerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D785B5B2D78270D00389C6A /* MintTrackerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D785B6C2D78270D00389C6A /* Build configuration list for PBXNativeTarget "MintTrackerDemoUITests" */;
+			buildPhases = (
+				5D785B582D78270D00389C6A /* Sources */,
+				5D785B592D78270D00389C6A /* Frameworks */,
+				5D785B5A2D78270D00389C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D785B5E2D78270D00389C6A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5D785B5F2D78270D00389C6A /* MintTrackerDemoUITests */,
+			);
+			name = MintTrackerDemoUITests;
+			packageProductDependencies = (
+			);
+			productName = MintTrackerDemoUITests;
+			productReference = 5D785B5C2D78270D00389C6A /* MintTrackerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5D785B722D782A9E00389C6A /* MintWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D785B892D782AA000389C6A /* Build configuration list for PBXNativeTarget "MintWidgetExtensionExtension" */;
+			buildPhases = (
+				5D785B6F2D782A9E00389C6A /* Sources */,
+				5D785B702D782A9E00389C6A /* Frameworks */,
+				5D785B712D782A9E00389C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5D785B792D782A9E00389C6A /* MintWidgetExtension */,
+			);
+			name = MintWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = MintWidgetExtensionExtension;
+			productReference = 5D785B732D782A9E00389C6A /* MintWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D785B382D78270C00389C6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					5D785B3F2D78270C00389C6A = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					5D785B512D78270D00389C6A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 5D785B3F2D78270C00389C6A;
+					};
+					5D785B5B2D78270D00389C6A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 5D785B3F2D78270C00389C6A;
+					};
+					5D785B722D782A9E00389C6A = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 5D785B3B2D78270C00389C6A /* Build configuration list for PBXProject "MintTrackerDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D785B372D78270C00389C6A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5D785B412D78270C00389C6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D785B3F2D78270C00389C6A /* MintTrackerDemo */,
+				5D785B512D78270D00389C6A /* MintTrackerDemoTests */,
+				5D785B5B2D78270D00389C6A /* MintTrackerDemoUITests */,
+				5D785B722D782A9E00389C6A /* MintWidgetExtensionExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D785B3E2D78270C00389C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B502D78270D00389C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B5A2D78270D00389C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B712D782A9E00389C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D785B3C2D78270C00389C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B4E2D78270D00389C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B582D78270D00389C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D785B6F2D782A9E00389C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D785B542D78270D00389C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D785B3F2D78270C00389C6A /* MintTrackerDemo */;
+			targetProxy = 5D785B532D78270D00389C6A /* PBXContainerItemProxy */;
+		};
+		5D785B5E2D78270D00389C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D785B3F2D78270C00389C6A /* MintTrackerDemo */;
+			targetProxy = 5D785B5D2D78270D00389C6A /* PBXContainerItemProxy */;
+		};
+		5D785B862D782AA000389C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D785B722D782A9E00389C6A /* MintWidgetExtensionExtension */;
+			targetProxy = 5D785B852D782AA000389C6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5D785B642D78270D00389C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D785B652D78270D00389C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D785B672D78270D00389C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MintTrackerDemo/MintTrackerDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MintTrackerDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = TTAL9X9MP2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D785B682D78270D00389C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MintTrackerDemo/MintTrackerDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MintTrackerDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = TTAL9X9MP2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D785B6A2D78270D00389C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MintTrackerDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MintTrackerDemo";
+			};
+			name = Debug;
+		};
+		5D785B6B2D78270D00389C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MintTrackerDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MintTrackerDemo";
+			};
+			name = Release;
+		};
+		5D785B6D2D78270D00389C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MintTrackerDemo;
+			};
+			name = Debug;
+		};
+		5D785B6E2D78270D00389C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MintTrackerDemo;
+			};
+			name = Release;
+		};
+		5D785B8A2D782AA000389C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MintWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TTAL9X9MP2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MintWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MintWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemo.MintWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D785B8B2D782AA000389C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MintWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TTAL9X9MP2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MintWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MintWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sb.MintTrackerDemo.MintWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D785B3B2D78270C00389C6A /* Build configuration list for PBXProject "MintTrackerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D785B642D78270D00389C6A /* Debug */,
+				5D785B652D78270D00389C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D785B662D78270D00389C6A /* Build configuration list for PBXNativeTarget "MintTrackerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D785B672D78270D00389C6A /* Debug */,
+				5D785B682D78270D00389C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D785B692D78270D00389C6A /* Build configuration list for PBXNativeTarget "MintTrackerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D785B6A2D78270D00389C6A /* Debug */,
+				5D785B6B2D78270D00389C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D785B6C2D78270D00389C6A /* Build configuration list for PBXNativeTarget "MintTrackerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D785B6D2D78270D00389C6A /* Debug */,
+				5D785B6E2D78270D00389C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D785B892D782AA000389C6A /* Build configuration list for PBXNativeTarget "MintWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D785B8A2D782AA000389C6A /* Debug */,
+				5D785B8B2D782AA000389C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D785B382D78270C00389C6A /* Project object */;
+}
