@@ -1,11 +1,12 @@
 import SwiftUI
 import WidgetKit
 
+// Ensure this matches the App Group identifier used in your widget.
 let appGroupIdentifier = "group.example.MintCounter"
 
 struct ContentView: View {
     @State private var mintCount: Int = 0
-    @Environment(\.scenePhase) private var scenePhase  // Track scene phase
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         VStack(spacing: 20) {
@@ -19,11 +20,20 @@ struct ContentView: View {
             .background(Color.green.opacity(0.8))
             .foregroundColor(.white)
             .cornerRadius(10)
+            
+            // New Reset button:
+            Button("Reset Counter") {
+                resetCounter()
+            }
+            .padding()
+            .background(Color.red.opacity(0.8))
+            .foregroundColor(.white)
+            .cornerRadius(10)
         }
         .onAppear {
             updateMintCount()
         }
-        // Listen for scene phase changes and update when the app becomes active.
+        // Update counter when app becomes active.
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .active {
                 updateMintCount()
@@ -43,8 +53,16 @@ struct ContentView: View {
         let newTotal = current + 1
         sharedDefaults?.set(newTotal, forKey: "mintCount")
         mintCount = newTotal
-        
-        // Optionally, refresh the widget timeline so the widget updates immediately.
+        // Refresh the widget timeline to update the widget.
+        WidgetCenter.shared.reloadTimelines(ofKind: "MintTrackerWidget")
+    }
+    
+    // Reset function sets the counter to 0.
+    func resetCounter() {
+        let sharedDefaults = UserDefaults(suiteName: appGroupIdentifier)
+        sharedDefaults?.set(0, forKey: "mintCount")
+        mintCount = 0
+        // Refresh the widget timeline to update the widget.
         WidgetCenter.shared.reloadTimelines(ofKind: "MintTrackerWidget")
     }
 }
