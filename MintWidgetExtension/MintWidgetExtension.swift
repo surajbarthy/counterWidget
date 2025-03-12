@@ -2,10 +2,8 @@ import WidgetKit
 import SwiftUI
 import AppIntents
 
-//let appGroupIdentifier = "group.example.MintCounter"
-//let sharedDefaults = UserDefaults(suiteName: appGroupIdentifier)
-
-//UserDefaults(suiteName: "group.example.MintCounter")
+// Define your App Group identifier.
+let appGroupIdentifier = "group.example.MintCounter"
 
 // MARK: - Timeline Entry
 struct MintEntry: TimelineEntry {
@@ -15,7 +13,6 @@ struct MintEntry: TimelineEntry {
 
 // MARK: - Timeline Provider
 struct MintProvider: AppIntentTimelineProvider {
-    // Define the associated types for the timeline provider.
     typealias Entry = MintEntry
     typealias Intent = MintIncrementIntent
 
@@ -23,60 +20,71 @@ struct MintProvider: AppIntentTimelineProvider {
         MintEntry(date: Date(), mintCount: 0)
     }
     
-    // Provide a snapshot of your widget.
     func snapshot(for configuration: MintIncrementIntent, in context: Context) async -> MintEntry {
         MintEntry(date: Date(), mintCount: fetchMintCount())
     }
     
-    // Provide the timeline (using a single entry here).
     func timeline(for configuration: MintIncrementIntent, in context: Context) async -> Timeline<MintEntry> {
         let entry = MintEntry(date: Date(), mintCount: fetchMintCount())
         return Timeline(entries: [entry], policy: .atEnd)
     }
     
-    // Helper to fetch the current mint count.
+    // Read the shared counter from the App Group's UserDefaults.
     private func fetchMintCount() -> Int {
-        return UserDefaults.standard.integer(forKey: "mintCount")
+        return UserDefaults(suiteName: appGroupIdentifier)?.integer(forKey: "mintCount") ?? 0
     }
 }
 
 // MARK: - Interactive Intent
 struct MintIncrementIntent: AppIntent, WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Add Mint"
-    static var description = IntentDescription("Increment the mint counter in the widget.")
+    static var description = IntentDescription("Increment the mint counter.")
 
     func perform() async throws -> some IntentResult {
-        let current = UserDefaults.standard.integer(forKey: "mintCount")
+        let sharedDefaults = UserDefaults(suiteName: appGroupIdentifier)
+        let current = sharedDefaults?.integer(forKey: "mintCount") ?? 0
         let newTotal = current + 1
-        UserDefaults.standard.set(newTotal, forKey: "mintCount")
+        sharedDefaults?.set(newTotal, forKey: "mintCount")
         print("Mint count updated to \(newTotal)")
         return .result()
     }
 }
 
-// MARK: - Widget View
-struct MintWidgetExtensionEntryView: View {
+// MARK: - Styled Widget View
+struct MintWidgetEntryView: View {
     var entry: MintEntry
 
     var body: some View {
-        VStack {
-            Text("Mints: \(entry.mintCount)")
-                .font(.headline)
-            
-            // Interactive button (iOS 17+) that triggers the intent.
-            Button(intent: MintIncrementIntent()) {
-                Text("Add Mint")
-                    .padding(8)
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+        ZStack {
+            // Set the background color. Adjust the RGB values as needed.
+            Color(red: 255/255, green: 249/255, blue: 240/255)
+                .ignoresSafeArea()
+            VStack(spacing: 0) {
+                // Title text.
+                Text("Add a puff")
+                    .font(.system(size: 16, weight: .medium, design: .rounded))
+                    .foregroundColor(Color(red: 255/255, green: 127/255, blue: 65/255))
+                // Display the counter value in a large, bold font.
+                Text("\(entry.mintCount)")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                    .foregroundColor(Color(red: 45/255, green: 42/255, blue: 38/255))
+                // Interactive button: a circle with a plus icon.
+                Button(intent: MintIncrementIntent()) {
+                    Image(systemName: "plus")
+                        .font(.title)
+//                        .foregroundColor(.white)
+                        .foregroundColor(Color(red: 25/255, green: 48/255, blue: 43/255))
+
+                        .padding(20)
+                        .background(Circle().fill(Color(red: 208/255, green: 222/255, blue: 187/255)))
+                }
             }
+            .padding()
         }
-        .padding()
     }
 }
 
-// MARK: - Interactive Widget Definition
+// MARK: - Widget Definition
 struct MintTrackerWidget: Widget {
     let kind: String = "MintTrackerWidget"
 
@@ -86,7 +94,7 @@ struct MintTrackerWidget: Widget {
             intent: MintIncrementIntent.self,
             provider: MintProvider()
         ) { entry in
-            MintWidgetExtensionEntryView(entry: entry)
+            MintWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Mint Tracker")
         .description("Track your mints with an interactive widget.")

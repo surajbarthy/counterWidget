@@ -1,61 +1,56 @@
-//
-//  ContentView.swift
-//  MintTrackerDemo
-//
-//  Created by Suraj Barthy on 3/5/25.
-//
-
 import SwiftUI
-import SwiftData
+import WidgetKit
+
+let appGroupIdentifier = "group.example.MintCounter"
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var mintCount: Int = 0
+    @Environment(\.scenePhase) private var scenePhase  // Track scene phase
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        VStack(spacing: 20) {
+            Text("Mint Count: \(mintCount)")
+                .font(.largeTitle)
+                .padding()
+            Button("Add Mint") {
+                incrementMintCount()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            .padding()
+            .background(Color.green.opacity(0.8))
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .onAppear {
+            updateMintCount()
+        }
+        // Listen for scene phase changes and update when the app becomes active.
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                updateMintCount()
             }
-        } detail: {
-            Text("Select an item")
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
+    
+    func updateMintCount() {
+        let sharedDefaults = UserDefaults(suiteName: appGroupIdentifier)
+        let newCount = sharedDefaults?.integer(forKey: "mintCount") ?? 0
+        mintCount = newCount
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+    
+    func incrementMintCount() {
+        let sharedDefaults = UserDefaults(suiteName: appGroupIdentifier)
+        let current = sharedDefaults?.integer(forKey: "mintCount") ?? 0
+        let newTotal = current + 1
+        sharedDefaults?.set(newTotal, forKey: "mintCount")
+        mintCount = newTotal
+        
+        // Optionally, refresh the widget timeline so the widget updates immediately.
+        WidgetCenter.shared.reloadTimelines(ofKind: "MintTrackerWidget")
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
